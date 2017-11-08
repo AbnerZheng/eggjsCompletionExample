@@ -7,7 +7,11 @@
         "moduleResolution": "Node",	
         "sourceMap": true,
         "outDir": "./built", 
-        "allowJs": true, 
+        "allowJs": true,
+        "baseUrl": "app",
+		"paths": {
+            "@eggtypings/*": ["eggtypings/*"]
+        },
         "target": "es5"
     }
 }
