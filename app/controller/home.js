@@ -5,9 +5,7 @@ const Controller = require('egg').Controller;
 class HomeController extends Controller {
 	*index() {
 		const ctx = this.ctx;
-		const page = ctx.query.page || 1;
-		const newsList = yield ctx.service.news.list(page);
-		this.ctx.body = JSON.stringify(newsList);
+		yield ctx.service.news.list(1);
 	}
 	/**
 	 * test as
@@ -19,4 +17,4 @@ class HomeController extends Controller {
 	}
 }
 
-module.exports = HomeController;
+export default HomeController;

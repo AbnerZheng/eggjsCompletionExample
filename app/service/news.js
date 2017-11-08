@@ -4,7 +4,11 @@
 
 const Service = require('egg').Service;
 class NewsService extends Service {
-	* list(page = 1) {
+	/**
+	 * 
+	 * @param {Number} page 
+	 */
+	* list(page) {
 		// read config
 		const { serverUrl, pageSize } = this.app.config.news;
 		// use build-in http client to GET hacker-news api
@@ -25,4 +29,4 @@ class NewsService extends Service {
 	}
 }
 
-module.exports = NewsService;
+export default NewsService;

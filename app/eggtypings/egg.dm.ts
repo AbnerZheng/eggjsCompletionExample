@@ -4,8 +4,8 @@
 
 import {IService, IController} from "egg";
 
-import {HomeController} from "@eggtypings/home";
-import {NewsService} from "@eggtypings/news"
+import HomeController  from "../controller/home.js";
+import NewsService  from "../service/news.js"
 
 declare module "egg"{
     interface IService{
